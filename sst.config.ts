@@ -3,12 +3,17 @@
 export default $config({
   app(input) {
     return {
-      name: "conflux-spa-ion",
+      name: "aws-nextjs",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
     };
   },
   async run() {
-    new sst.aws.Nextjs("MyWeb");
+    const bucket = new sst.aws.Bucket("MyBucket", {
+      public: true,
+    });
+    new sst.aws.Nextjs("MyWeb", {
+      link: [bucket],
+    });
   },
 });
