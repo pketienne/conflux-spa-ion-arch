@@ -1,29 +1,31 @@
 {
-  "dependencies": {
-    "@aws-sdk/client-s3": "^3.554.0",
-    "@aws-sdk/s3-request-presigner": "^3.554.0",
-    "next": "14.1.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "sst": "ion"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4",
-    "prettier": "^3.2.5",
-    "typescript": "^5"
-  },
-  "name": "conflux-spa-ion",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "format": "prettier --write .",
-    "lint": "next lint",
-    "start": "next start"
-  },
-  "version": "0.1.0"
+	"dependencies": {
+		"@aws-sdk/client-s3": "^3.554.0",
+		"@aws-sdk/s3-request-presigner": "^3.554.0",
+		"next": "14.1.4",
+		"react": "^18",
+		"react-dom": "^18",
+		"sst": "ion"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"eslint": "^8",
+		"eslint-config-next": "14.1.4",
+		"husky": "^9.0.11",
+		"prettier": "^3.2.5",
+		"typescript": "^5"
+	},
+	"name": "conflux-spa-ion",
+	"private": true,
+	"scripts": {
+		"build": "next build",
+		"dev": "next dev",
+		"format": "prettier --write .",
+		"lint": "next lint",
+		"start": "next start",
+		"prepare": "husky"
+	},
+	"version": "0.1.0"
 }
